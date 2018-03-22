@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Navy Kashish Pashmina Shawl",
+        "price": 20.99,
+        "imgUrl": "http://www.eastessence.com/SWV015_frontthumbnail.jpg"
+    },
+    {
+        "name": "Lihaaz Red Pashmina Shawl",
+        "price": 25.99,
+        "imgUrl": "http://www.eastessence.com/SWV030_frontthumbnail.jpg"
+    },
+    {
+        "name": "Lihaaz Beige Pashmina Shawl",
+        "price": 26.99,
+        "imgUrl": "http://www.eastessence.com/SWV028_frontthumbnail.jpg"
+    },
+    {
+        "name": "Ash Broad Border Pashmina Shawl",
+        "price": 19.99,
+        "imgUrl": "http://www.eastessence.com/SWV008_frontthumbnail.jpg"
+    },
+    {
+        "name": "Red Plain Border Pashmina Shawl",
+        "price": 22.99,
+        "imgUrl": "http://www.eastessence.com/SWV001_frontthumbnail.jpg"
+    }
+]

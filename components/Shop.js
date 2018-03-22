@@ -1,32 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Header } from 'react-native-elements';
 
+// Custom Component
 import Items from './Items';
 import Basket from './Basket';
+
+import items from './data';
 
 export default class Shop extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>SHOP</Text>
-                <Items/>
+            <View>
+                <Header
+                    leftComponent={{ icon: 'menu', color: '#fff' }}
+                    centerComponent={{ text: 'Pashmina Style', style: { color: '#fff' } }}
+                    rightComponent={{ icon: 'home', color: '#fff' }}
+                    backgroundColor={'#ac4d59'}
+                />
+                <Items data={items}/>
                 <Basket/>
             </View>
         )
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        width: 350,
-        height: 550,
-        padding: 20,
-        backgroundColor: 'powderblue',
-        borderColor: 'black',
-        borderWidth: 1,
-    },
-    sections: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-    }
-})
