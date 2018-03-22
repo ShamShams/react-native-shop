@@ -6,8 +6,8 @@ export default class Item extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>ITEM</Text>
-                <Text>name</Text>
-                <Text>price</Text>
+                <Text>{ this.props.name }</Text>
+                <Text>{ this.props.price } €</Text>
             </View>
         )
     }
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         height: 80,
         borderColor: 'black',
         borderWidth: 1,
-        backgroundColor: 'steelblue',
+        backgroundColor: 'lightblue',
         justifyContent: 'center',
         alignItems: 'center',
     }
