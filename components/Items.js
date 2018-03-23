@@ -1,29 +1,32 @@
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
-import { Card, Button } from 'react-native-elements';
+import { View, Text, StyleSheet } from 'react-native';
+import { Divider } from 'react-native-elements';
 
-export default class Items extends React.Component {
-    render() {
-        return (
-            <ScrollView>
-                { this.props.data.map((item, i) =>
-                    <Card
-                        key={i}
-                        image={{uri:item.imgUrl}}
-                    >
-                        <Text style={{fontSize: 16, fontWeight: 'bold', textAlign: 'center'}}>
-                            {item.name}
-                        </Text>
-                        <Text style={{marginBottom: 10, fontSize: 17, textAlign: 'center'}}>
-                            {item.price} €
-                        </Text>
-                        <Button
-                            backgroundColor='#ac4d59'
-                            title='I WANT IT !'
-                        />
-                    </Card>
-                )}
-            </ScrollView>
-        );
+import Item from './Item';
+import Basket from './Basket';
+
+const Items = ({ data, name, price, image, addItem }) => (
+    <View>
+        <Text style={ styles.sectionTitle }>COLLECTION GOLDEN</Text>
+        { data.map((item, i) =>
+            <Item
+                key={i}
+                item={ item }
+                addItem={ addItem }
+            />
+        )}
+    </View>
+);
+
+export default Items;
+
+const styles = StyleSheet.create({
+    sectionTitle: {
+        marginTop: 15,
+        fontSize: 16,
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        textAlign: 'center',
+        color: '#C4A181',
     }
-}
+});

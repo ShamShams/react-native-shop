@@ -1,26 +1,37 @@
 import React from 'react';
-import { Card } from 'react-native-elements';
+import { View, Text, StyleSheet } from 'react-native';
+import { Card, Button } from 'react-native-elements';
 
-export default class Item extends React.Component {
+const Item = ({ item, addItem }) => (
+    <Card image={{ uri: item.imgUrl }}>
+        <Text style={ styles.itemName }>
+            { item.name }
+        </Text>
+        <Text style={ styles.itemPrice }>
+            { item.price } €
+        </Text>
+        <Button
+            backgroundColor='#C4A181'
+            title='AJOUTER AU PANIER'
+            onPress={ addItem }
+        />
+    </Card>
+);
 
-    render() {
-        return (
-            <Card
-                title={}
-                image={require('../images/pic2.jpg')}
-            >
-                <Text style={{marginBottom: 10}}>
-                    The idea with React Native Elements is more about component structure than actual design.
-                </Text>
-                <Button
-                    icon={{name: 'code'}}
-                    backgroundColor='#03A9F4'
-                    fontFamily='Lato'
-                    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                    title='VIEW NOW'
-                />
-            </Card>
-        );
+export default Item;
+
+const styles = StyleSheet.create ({
+    itemName: {
+        marginBottom: 3,
+        fontSize: 15,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    itemPrice: {
+        marginBottom: 10,
+        color: '#C4A181',
+        fontSize: 16,
+        fontWeight: 'bold',
+        textAlign: 'center'
     }
-
-}
+})
